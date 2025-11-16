@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEO Test Page - AccessDevOps</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+          sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        max-width: 800px;
+        width: 100%;
+        padding: 40px;
+      }
+
+      h1 {
+        color: #2d3748;
+        margin-bottom: 12px;
+        font-size: 28px;
+      }
+
+      .subtitle {
+        color: #718096;
+        margin-bottom: 32px;
+        font-size: 16px;
+      }
+
+      .checklist {
+        list-style: none;
+      }
+
+      .checklist li {
+        padding: 16px;
+        margin-bottom: 12px;
+        background: #f7fafc;
+        border-left: 4px solid #48bb78;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .checklist li::before {
+        content: '✓';
+        color: white;
+        background: #48bb78;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        flex-shrink: 0;
+      }
+
+      .checklist li.pending::before {
+        content: '○';
+        background: #cbd5e0;
+        color: #2d3748;
+      }
+
+      .checklist li.pending {
+        border-left-color: #cbd5e0;
+      }
+
+      .tools {
+        margin-top: 32px;
+        padding-top: 32px;
+        border-top: 2px solid #e2e8f0;
+      }
+
+      .tools h2 {
+        color: #2d3748;
+        margin-bottom: 20px;
+        font-size: 22px;
+      }
+
+      .tool-link {
+        display: inline-block;
+        padding: 12px 24px;
+        margin: 8px 8px 8px 0;
+        background: #667eea;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+
+      .tool-link:hover {
+        background: #5a67d8;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+      }
+
+      .code {
+        background: #2d3748;
+        color: #68d391;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: 'Courier New', monospace;
+        font-size: 14px;
+      }
+
+      .warning {
+        background: #fef5e7;
+        border-left-color: #f6ad55;
+        color: #744210;
+      }
+
+      .warning::before {
+        content: '⚠';
+        background: #f6ad55;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎯 SEO Implementation Checklist</h1>
+      <p class="subtitle">Vérifiez que toutes les optimisations SEO sont en place</p>
+
+      <ul class="checklist">
+        <li>
+          <span>Meta tags de base ajoutés dans <span class="code">index.html</span></span>
+        </li>
+        <li>
+          <span>Composable <span class="code">useSEO.ts</span> créé et fonctionnel</span>
+        </li>
+        <li>
+          <span>Structured data JSON-LD implémenté (Organization, Service, FAQ)</span>
+        </li>
+        <li>
+          <span>Structure sémantique HTML (sections avec id, aria-labels)</span>
+        </li>
+        <li>
+          <span
+            ><span class="code">robots.txt</span> et
+            <span class="code">sitemap.xml</span> créés</span
+          >
+        </li>
+        <li class="pending warning">
+          <span>Images OG à créer : <span class="code">og-image.jpg</span> (1200x630px)</span>
+        </li>
+        <li class="pending warning">
+          <span>Remplacer toutes les URLs par votre domaine réel</span>
+        </li>
+        <li class="pending warning">
+          <span>Mettre à jour les informations de contact (email, téléphone)</span>
+        </li>
+      </ul>
+
+      <div class="tools">
+        <h2>🧪 Outils de Test SEO</h2>
+        <a href="https://search.google.com/test/rich-results" target="_blank" class="tool-link">
+          Rich Results Test
+        </a>
+        <a href="https://metatags.io/" target="_blank" class="tool-link"> Meta Tags Preview </a>
+        <a href="https://pagespeed.web.dev/" target="_blank" class="tool-link">
+          PageSpeed Insights
+        </a>
+        <a href="https://search.google.com/search-console" target="_blank" class="tool-link">
+          Search Console
+        </a>
+      </div>
+
+      <div class="tools">
+        <h2>📚 Documentation</h2>
+        <p style="color: #4a5568; line-height: 1.6">
+          Consultez <span class="code">SEO_GUIDE.md</span> pour la documentation complète<br />
+          Consultez <span class="code">SEO_IMPLEMENTATION_SUMMARY.md</span> pour le résumé
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
