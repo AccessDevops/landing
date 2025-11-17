@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { useAnalytics } from '../composables/useAnalytics'
+
+const { trackBookingEvent } = useAnalytics()
 
 const props = defineProps<{
   isOpen: boolean
@@ -82,6 +85,12 @@ const handleSubmit = () => {
   if (!isFormValid.value) {
     return
   }
+
+  // Track booking submission
+  trackBookingEvent('submitted', {
+    date: props.selectedDate?.toISOString().split('T')[0],
+    time: props.selectedTime,
+  })
 
   emit('submit', {
     name: form.value.name,

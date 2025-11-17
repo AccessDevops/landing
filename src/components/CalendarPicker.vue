@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { useAnalytics } from '../composables/useAnalytics'
+
+const { trackBookingEvent } = useAnalytics()
 
 const props = defineProps<{
   modelValue?: Date
@@ -99,6 +102,10 @@ const isWeekend = (date: Date | null) => {
 const selectDate = (date: Date | null) => {
   if (!date || isPast(date) || isWeekend(date)) return
   selectedDate.value = date
+  // Track date selection
+  trackBookingEvent('date_selected', {
+    date: date.toISOString().split('T')[0],
+  })
 }
 
 const previousMonth = () => {

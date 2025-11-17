@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { ref, watch, computed } from 'vue'
 import { useBookingApi } from '../composables/useBookingApi'
+import { useAnalytics } from '../composables/useAnalytics'
+
+const { trackBookingEvent } = useAnalytics()
 
 const props = defineProps<{
   modelValue?: string
@@ -55,6 +58,11 @@ const isSlotAvailable = (slot: string) => {
 const selectTimeSlot = (time: string) => {
   if (isSlotAvailable(time)) {
     emit('update:modelValue', time)
+    // Track time slot selection
+    trackBookingEvent('time_selected', {
+      time,
+      date: props.selectedDate?.toISOString().split('T')[0],
+    })
   }
 }
 

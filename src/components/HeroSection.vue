@@ -8,8 +8,10 @@ import TimeSlotPicker from './TimeSlotPicker.vue'
 import BookingModal from './BookingModal.vue'
 import ConfirmationModal from './ConfirmationModal.vue'
 import { useBookingApi } from '../composables/useBookingApi'
+import { useAnalytics } from '../composables/useAnalytics'
 
 const toast = useToast()
+const { trackBookingEvent, trackCTA } = useAnalytics()
 
 const metrics = [
   { value: '167', label: 'Active Customers' },
@@ -45,11 +47,16 @@ const startBooking = () => {
   showBookingFlow.value = true
   bookingResult.value = null
   apiError.value = null
+  trackCTA('hero', 'Book a Call - Initial Click')
 }
 
 const handleProceedToForm = () => {
   if (canProceedToModal.value) {
     showModal.value = true
+    trackBookingEvent('modal_opened', {
+      date: selectedDate.value?.toISOString().split('T')[0],
+      time: selectedTime.value,
+    })
   }
 }
 
@@ -110,6 +117,14 @@ const handleBookingSubmit = async (data: { name: string; email: string; descript
     console.log('Name:', result.booking.name)
     console.log('Email:', result.booking.email)
     console.log('========================')
+
+    // Track booking completion
+    trackBookingEvent('completed', {
+      action: result.action,
+      booking_id: result.booking.id,
+      date: result.booking.booking_date,
+      time: result.booking.booking_time,
+    })
 
     // Close booking modal and reset flow
     showModal.value = false
