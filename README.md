@@ -12,11 +12,11 @@ Highlights: The phrase "Success as a Service" is highlighted in a lighter blue b
 
 Key Metrics: Below the title, there are three cards displaying key metrics:
 
-167 Active Customers
+28  Active Customers
 
-1,084 Managed Servers
+162 Managed Servers
 
-3,412 Major Deployments
+1416 Major Deployments
 
 Call to Action & Description:
 

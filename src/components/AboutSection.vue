@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const locations = ['France', 'Spain', 'Canada', 'Colombia', 'Japan']
+const locations = ['France', 'Canada', 'Romania']
 
 const coverage = [
   { icon: '🌍', label: 'Europe' },
-  { icon: '🌎', label: 'North & South America' },
-  { icon: '🌏', label: 'Asia' },
-  { icon: '✈️', label: '24/7 Worldwide Support' },
+  { icon: '🌎', label: 'North America' },
+  // { icon: '🌏', label: 'Asia' },
+  { icon: '✈️', label: 'Worldwide Support' },
 ]
 </script>
 
@@ -29,10 +29,10 @@ const coverage = [
         class="bg-white rounded-xl p-10 mb-12"
       >
         <p class="text-slate-700 leading-relaxed mb-8 text-lg">
-          With over 500 customers and 1000+ server instances under our management across Europe,
+          With over 150+ server instances under our management across Europe,
           America, and Asia, we've built the expertise to handle infrastructure at any scale. Our
-          global presence with offices in France, Spain, Canada, Colombia, and Japan ensures that
-          our team is always ready to support you with 24/7 human service, no matter where you are.
+          global presence with offices in France, Canada and Romania ensures that
+          our team is always ready to support you with a human service, no matter where you are.
         </p>
 
         <div class="grid md:grid-cols-2 gap-6">

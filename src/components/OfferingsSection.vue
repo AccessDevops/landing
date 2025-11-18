@@ -8,15 +8,15 @@ const offerings = [
     description:
       'A single time intervention on your infrastructure. Perfect for teams who need initial setup and want to manage it themselves afterward.',
     features: [],
-    highlighted: false,
+    variant: 'purple' as const,
   },
   {
     title: 'WDI',
     subtitle: 'We Do It',
     description:
-      'Complete infrastructure management. We handle hosting, security, and deployments while you focus on your business.',
+      'Complete infrastructure management based on GCP. We handle hosting, security, and deployments while you focus on your business.',
     features: [],
-    highlighted: false,
+    variant: 'blue' as const,
   },
   {
     title: 'WIU',
@@ -24,7 +24,7 @@ const offerings = [
     description:
       'Our experts become an extension of your engineering team. We manage a part of your infrastructure while providing mentorship and knowledge transfer.',
     features: [],
-    highlighted: true,
+    variant: 'orange' as const,
   },
 ]
 </script>
@@ -56,7 +56,7 @@ const offerings = [
             :subtitle="offering.subtitle"
             :description="offering.description"
             :features="offering.features"
-            :highlighted="offering.highlighted"
+            :variant="offering.variant"
           />
         </div>
       </div>

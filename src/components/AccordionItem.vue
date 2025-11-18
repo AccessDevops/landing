@@ -24,8 +24,9 @@ const isOpen = ref(false)
         >▼</span
       >
     </button>
-    <div v-if="isOpen && answer" class="px-6 py-4 bg-white border-t border-slate-200">
-      <p class="text-slate-700 leading-relaxed">{{ answer }}</p>
+    <div v-if="isOpen" class="px-6 pb-6 border-t border-slate-200 bg-slate-50">
+      <slot v-if="$slots.default" />
+      <p v-else-if="answer" class="text-slate-700 leading-relaxed">{{ answer }}</p>
     </div>
   </div>
 </template>

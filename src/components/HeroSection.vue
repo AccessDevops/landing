@@ -14,9 +14,9 @@ const toast = useToast()
 const { trackBookingEvent, trackCTA } = useAnalytics()
 
 const metrics = [
-  { value: '167', label: 'Active Customers' },
-  { value: '1,085', label: 'Managed Servers' },
-  { value: '3,416', label: 'Major Deployments' },
+  { value: '28', label: 'Active Customers' },
+  { value: '162', label: 'Managed Servers' },
+  { value: '1416', label: 'Deployments' },
 ]
 
 const { createBooking, isLoading: isSubmitting, error: apiError } = useBookingApi()

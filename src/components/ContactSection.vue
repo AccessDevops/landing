@@ -156,9 +156,9 @@ const cancelBooking = () => {
         v-motion
         :initial="{ opacity: 0, y: 30 }"
         :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 600, delay: 200, ease: 'easeOut' } }"
-        class="grid md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto"
+        class="grid md:grid-cols-2 gap-6 mb-12 max-w-4xl mx-auto"
       >
-        <ContactInfoCard title="Email" value="contact@devops-service.com">
+        <ContactInfoCard title="Email" value="contact@accessdevops.com">
           <template #icon>
             <svg
               class="w-8 h-8 text-blue-600 mx-auto mb-4"
@@ -171,7 +171,7 @@ const cancelBooking = () => {
             </svg>
           </template>
         </ContactInfoCard>
-        <ContactInfoCard title="Phone" value="Available 24/7">
+        <!-- <ContactInfoCard title="Phone" value="Available 24/7">
           <template #icon>
             <svg
               class="w-8 h-8 text-blue-600 mx-auto mb-4"
@@ -184,8 +184,8 @@ const cancelBooking = () => {
               />
             </svg>
           </template>
-        </ContactInfoCard>
-        <ContactInfoCard title="Locations" value="5 Global Offices">
+        </ContactInfoCard> -->
+        <ContactInfoCard title="Locations" value="3 Global Offices">
           <template #icon>
             <svg
               class="w-8 h-8 text-blue-600 mx-auto mb-4"

@@ -72,7 +72,7 @@ const tools = [
             :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 600, delay: 600, ease: 'easeOut' } }"
             class="text-center text-slate-600 mt-6 text-sm"
           >
-            8+ years of partnership with Google Cloud giving us access to cutting-edge
+            5+ years of partnership with Google Cloud giving us access to cutting-edge
             infrastructure at competitive pricing.
           </p>
         </div>
