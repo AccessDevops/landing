@@ -7,14 +7,14 @@ interface ComparisonRow {
 }
 
 const comparisonData: ComparisonRow[] = [
-  { service: 'Access fee', oti: 'Starting at 199€', wdi: '489€ monthly', wiu: '899€ monthly' },
+  { service: 'Access fee', oti: 'Starting at 199€', wdi: '689€ monthly', wiu: '1099€ monthly' },
   { service: 'One time Setup fee', oti: false, wdi: '3 x 266€', wiu: '3 x 266€' },
   { service: 'Initial Code Base Review', oti: true, wdi: true, wiu: true },
   { service: 'Define Deployment Requirements', oti: true, wdi: true, wiu: true },
   { service: 'CI/CD Pipeline Setup', oti: 'optional', wdi: true, wiu: true },
   { service: 'Setup Static Analysis & Linting', oti: 'optional', wdi: true, wiu: true },
   { service: 'Setup Containerization', oti: 'optional', wdi: true, wiu: true },
-  { service: 'Perform Security Checks', oti: '1', wdi: 'monthly', wiu: 'monthly' },
+  { service: 'Perform Security Check', oti: '1', wdi: 'monthly', wiu: 'monthly' },
   { service: 'Maintain Monitoring & Logging', oti: false, wdi: true, wiu: true },
   { service: 'Documentation & Knowledge Transfer', oti: true, wdi: true, wiu: true },
   { service: 'Free Training & Meetings', oti: false, wdi: '5h monthly', wiu: '12h monthly' },
@@ -28,15 +28,8 @@ const comparisonData: ComparisonRow[] = [
   { service: 'Image Access', oti: false, wdi: true, wiu: true },
   { service: 'GCP Organisation Management', oti: false, wdi: true, wiu: false },
   { service: 'GCP Server, Network, Storage Management', oti: false, wdi: true, wiu: true },
-  { service: 'GCP CPU Cost', oti: false, wdi: '15$', wiu: '23$' },
-  { service: 'GCP RAM Cost', oti: false, wdi: '3$', wiu: '5$' },
-  { service: 'Extra Pipeline or Containerization changes', oti: '99€', wdi: '99€', wiu: '99€' },
-  {
-    service: 'Staging Environnement',
-    oti: 'Starting at 49€',
-    wdi: 'Starting at 49€',
-    wiu: 'Starting at 49€',
-  },
+  { service: 'GCP CPU Unit Monthly Cost', oti: false, wdi: '15$', wiu: '23$' },
+  { service: 'GCP RAM Unit Monthly Cost', oti: false, wdi: '3$', wiu: '5$' },
   {
     service: 'Database, shared storage, caching...',
     oti: 'Starting at 14€',
@@ -44,11 +37,18 @@ const comparisonData: ComparisonRow[] = [
     wiu: 'Starting at 14€',
   },
   {
+    service: 'Staging Environnement',
+    oti: 'Starting at 49€',
+    wdi: 'Starting at 49€',
+    wiu: 'Starting at 49€',
+  },
+  {
     service: 'Domain with SSL/TLS.',
     oti: 'Starting at 5€',
     wdi: 'Starting at 5€',
     wiu: 'Starting at 5€',
   },
+  { service: 'Extra Pipeline or Containerization changes', oti: '99€', wdi: '99€', wiu: '99€' },
 ]
 </script>
 

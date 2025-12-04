@@ -294,13 +294,13 @@ onUnmounted(() => {
           <circle cx="4" cy="20" r="2"></circle>
         </svg>
         <span class="text-base font-semibold text-blue-900">
-          Save 86% of your DevOps & Infra Cost
+          Save 83% of your DevOps & Infra Cost
         </span>
         <span class="text-sm text-blue-400">ⓘ</span>
         <div
           class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-slate-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-lg"
         >
-          On average, our clients spend €836 (including hosting fees).<br />
+          On average, our clients spend €1036 (including hosting fees).<br />
           A DevOps engineer represents a total employer cost of €6,042 per month.
         </div>
       </div>
